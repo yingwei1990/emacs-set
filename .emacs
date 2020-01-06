@@ -3,9 +3,9 @@
 ;; Description: 
 ;; Author: David Hou(侯英伟)
 ;; Created: 三 4月 26 10:17:28 2017 (+0800)
-;; Last-Updated: 一 1月  6 10:44:06 2020 (+0800)
+;; Last-Updated: 一 1月  6 17:59:09 2020 (+0800)
 ;;           By: David(侯英伟)
-;;     Update #: 147
+;;     Update #: 156
 ;; URL:http://125.223.127.17:1118/wordpress/index.php/author/yingwei1990/ 
 
 ;; Added by Package.el.  This must come before configurations of
@@ -15,12 +15,19 @@
 (package-initialize)
 
 ;;    设置个人信息      -----用户需要修改-----
-(setq user-full-name "David Hou(侯英伟)");;函数
-(setq user-mail-address "yingwei1990@hrbeu.edu.cn");;变量
-(setq user-url-address "https://github.com/yingwei1990emacs ");;变量
+(setq user-full-name "David Hou(侯英伟)")		  ;;函数
+(setq user-mail-address "yingwei1990@hrbeu.edu.cn")	  ;;变量
+(setq user-url-address "https://github.com/yingwei1990 ") ;;变量
 ;; (add-hook 'after-init-hook (lambda ()
 ;; 			     (setq frame-title-format "%b - David @ HEU")))
+;; (setq frame-title-format '("%b (" (:eval (directory-file-name (file-name-directory (abbreviate-file-name (buffer-file-name))))) ") - Emacs"))
 
+(setq frame-title-format '("%b"
+			   (:eval
+			    (if (buffer-file-name)
+				(concat " (" (directory-file-name (file-name-directory  (abbreviate-file-name (buffer-file-name))))")")""
+				)
+			    )" - Emacs"  ))
 ;; For my language code setting (UTF-8)
 (setq current-language-environment "UTF-8")
 (setq default-input-method "chinese-py")
