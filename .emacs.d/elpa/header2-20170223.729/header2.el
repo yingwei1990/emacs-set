@@ -12,9 +12,9 @@
 ;; Version: 0
 ;; Package-Version: 20170223.729
 ;; Package-Requires: ()
-;; Last-Updated: 三 4月 26 10:13:13 2017 (+0800)
-;;           By: David Hou(侯英伟)
-;;     Update #: 1954
+;; Last-Updated: 三 1月  1 20:46:50 2020 (+0800)
+;;           By: David(侯英伟)
+;;     Update #: 1955
 ;; URL: https://www.emacswiki.org/emacs/download/header2.el
 ;; Doc URL: http://emacswiki.org/AutomaticFileHeaders
 ;; Keywords: tools, docs, maint, abbrev, local
@@ -692,7 +692,7 @@ This is normally overwritten with each file save."
 
 (defsubst header-url ()
   "Insert \"URL: \" line."
-  (insert header-prefix-string "URL:http://125.223.127.17:1118/wordpress/index.php/author/yingwei1990/ \n"))
+  (insert header-prefix-string "URL:https://github.com/yingwei1990 \n"))
 
 (defsubst header-doc-url ()
   "Insert \"Doc URL: \" line."
